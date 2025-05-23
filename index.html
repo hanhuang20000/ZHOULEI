@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>星尚品牌 | 官方主页</title>
+  <style>
+    :root {
+      --primary-color: #d81b60;
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fdfdfd;
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, #000000, #434343);
+      color: white;
+      padding: 1.5em 2em;
+      text-align: center;
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      margin: 1em;
+      font-weight: bold;
+      transition: color 0.4s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      animation: fadeInZoom 1.5s ease-out;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 4em auto;
+      padding: 0 1.5em;
+      animation: slideIn 1.2s ease-out;
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      display: block;
+    }
+
+    .product .info {
+      padding: 1em;
+    }
+
+    .product .info h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    .contact {
+      background: #f5f5f5;
+      padding: 2em;
+      border-radius: 10px;
+    }
+
+    .contact p {
+      margin: 0.5em 0;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 4em;
+      animation: fadeIn 2s ease-in;
+    }
+
+    /* 动画定义 */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInZoom {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>星尚 · 品牌</h1>
+    <p>定义你的风格</p>
+  </header>
+
+  <nav>
+    <a href="#">主页</a>
+    <a href="#">品牌故事</a>
+    <a href="#">系列产品</a>
+    <a href="#">联系我们</a>
+  </nav>
+
+  <div class="hero">
+    <h1>时尚 · 自由 · 个性</h1>
+  </div>
+
+  <section class="about">
+    <h2>关于我们</h2>
+    <p>
+      星尚品牌创立于2015年，致力于打造简约、自由、具有都市气息的时尚风格。我们的设计灵感源于全球潮流趋势，并结合东方美学，推出一系列独具匠心的服饰产品。
+    </p>
+    <p>
+      品牌理念是“表达真实自我”。我们相信，每一个人都应该穿出自己的态度与风采。
+    </p>
+  </section>
+
+  <section class="products">
+    <h2>明星产品</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://source.unsplash.com/400x300/?fashion" alt="产品1">
+        <div class="info">
+          <h3>都市风连衣裙</h3>
+          <p>适合通勤与约会的百搭款式。</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://source.unsplash.com/400x300/?clothing" alt="产品2">
+        <div class="info">
+          <h3>简约宽松衬衫</h3>
+          <p>舒适自然，释放真实自我。</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://source.unsplash.com/400x300/?streetwear" alt="产品3">
+        <div class="info">
+          <h3>潮流街头套装</h3>
+          <p>个性设计，适合表达你的态度。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>联系我们</h2>
+    <p>邮箱：contact@xingshangfashion.com</p>
+    <p>电话：+86 400-123-4567</p>
+    <p>地址：上海市静安区时尚路88号</p>
+  </section>
+
+  <footer>
+    &copy; 2025 星尚时尚有限公司 | 版权所有
+  </footer>
+
+</body>
+</html>
